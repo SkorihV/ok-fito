@@ -1,0 +1,223 @@
+
+color-text-main = #000000
+
+color-gray-medium = #A5A5A5
+color-gray-dark = #BABABA
+color-gray-light = #F4F4F4
+
+color-green-light = #C4DDC2
+color-green-middle = #64A060
+color-green-dark = #40763D
+color-white = #FFFFFF
+
+
+* {
+  box-sizing border-box
+}
+
+.main__wrapper
+  display flex
+  flex-direction column
+  max-width em(1920)
+  width 100%
+  align-items center
+
+.section
+  &__wrapper
+    width 100%
+    display flex
+
+
+.button
+  color color-white
+  text-transform uppercase
+  padding  em(25) em(75)
+  border-radius em(20)
+  cursor pointer
+  display inline-block
+
+
+.input
+  font-weight 600
+  width 100%
+  line-height em(19.5)
+  color rgba(175, 175, 175, 1)
+  padding em(25) em(75)
+  border em(1) solid rgba(175, 175, 175, 1)
+  border-radius em(20)
+
+.header
+  //height em(100)
+  //+md-block()
+  //  font-size em(46)
+  //+lg-block()
+  //  height em(250)
+
+
+  &__section
+    height em(900)
+    display flex
+    flex-direction column
+    align-items center
+    color color-white
+    background linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url("../img/header/main.png")
+    background-repeat no-repeat
+    background-position center center
+    margin 0 auto
+
+  &__wrapper
+    display flex
+    justify-content space-around
+    max-width em(1520)
+    width 100%
+    color color-white
+    margin-top em(100)
+    padding 0 em(10)
+    position relative
+    align-items center
+    gap em(10)
+    .open
+      &__mobile-menu
+        width em(33)
+        height em(20)
+        display flex
+        align-items center
+        position relative
+        cursor pointer
+        top em(7)
+        margin-left em(22)
+        +md-block()
+          top auto
+          margin-left em(55)
+        +lg-block()
+          display none
+        &-btn
+          width 100%
+          height em(2)
+          background-color color-white
+          border-radius 50%
+        &::before,
+        &::after
+          content ''
+          width 100%
+          height em(2)
+          background-color color-white
+          border-radius 50%
+          position absolute
+        &::before
+          top 0
+        &::after
+          bottom 0
+    .menu
+      &__wrapper
+        display none
+        align-items center
+        +lg-block()
+          display flex
+
+      &__item
+        list-style none
+        cursor pointer
+        gap em(5)
+        padding em(16)
+        &:hover
+          border-bottom 1px solid color-white
+      &__link
+        text-transform uppercase
+        text-align center
+        text-decoration none
+        color color-white
+
+    .contacts
+      &__wrapper
+        display flex
+        align-items flex-end
+        +md-block()
+          flex 1 1 auto
+          width 100%
+          justify-content space-around
+        +lg-block()
+          flex-direction column
+          width auto
+          flex 1 0 auto
+
+      &__phone
+        display none
+        color color-white
+        text-decoration none
+        font-weight 600
+        font-size em(26)
+        font-family "Montserrat", Arial, sans-serif
+        +md-block()
+          display block
+        +lg-block()
+          margin-bottom  em(20)
+
+
+      &__social
+        display flex
+        align-items center
+        gap em(6)
+        position relative
+        top em(10)
+        +md-block()
+          top auto
+
+      &__icon
+        width em(32)
+        height em(32)
+        border-radius 50%
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+
+        &-telegram
+          background-image url("../img/header/telegram.png")
+
+        &-watsap
+          background-image url("../img/header/watsap.png")
+      &__time
+        opacity 0.7
+  &__logo
+    width em(183)
+    object-fit contain
+    display block
+    +md-block()
+      display none
+    +lg-block()
+        display block
+        bottom 50%
+        position relative
+        transform translateY(50%)
+    &_second
+      display none
+      +md-block()
+        display block
+        margin-top em(100)
+      +lg-block()
+        display none
+  &__label
+    font-size em(34)
+    line-height em(34)
+    margin em(100) 0 em(30)
+    max-width em(952 / 5)
+    text-align center
+    +md-block()
+      font-size em(80)
+      line-height em(64 / 5)
+      margin em(100 / 5) 0 em(30 / 5)
+    +lg-block()
+      line-height em(80/5)
+    &-second
+      font-size em(12)
+      line-height em(18)
+      font-weight 600
+      text-align center
+      +md-block()
+        font-size em(24)
+        line-height em(36)
+  &__button
+    background-color color-green-middle
+    margin-top em(50)
+    &:hover
+      background-color color-green-dark

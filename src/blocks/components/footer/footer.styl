@@ -1,0 +1,88 @@
+.footer
+  max-width em(1920)
+  height em(890)
+  position relative
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  &::before
+    content ''
+    position absolute
+    width em(1200)
+    height em(841)
+    left 0
+    top 0
+    background-image url("../../../img/footer/footer-img-1.png")
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+  &::after
+    position absolute
+    content ''
+    height em(841)
+    width em(1200)
+    right 0
+    bottom  0
+    background-image url("../../../img/footer/footer-img-2.png")
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+
+  &__form
+    &-wrapper
+      z-index 1
+      display flex
+      flex-direction column
+      align-items center
+      margin-bottom em(70)
+
+    &-label
+      font-weight 600
+      font-size em(24)
+      line-height em(36 / 1.5)
+      margin-bottom em(50 / 1.5)
+
+    &-field
+      &-wrapper
+        display flex
+        gap em(30)
+        margin-bottom em(50)
+      &-input
+        min-width em(400)
+        width 100%
+    &-submit
+      background-color #64A060
+      &:hover
+        background-color #40763D
+
+  &__social
+    &-wrapper
+      z-index 1
+      display flex
+      flex-direction column
+      align-items center
+    &-label
+      font-size em(60)
+      line-height em(60)
+
+    &-button-wrapper
+      display flex
+      gap em(40)
+
+    &-button-item
+      width em(103)
+      height em(103)
+      border-radius 50%
+      border em(1) solid #658961
+      background-color color-white
+      display flex
+      justify-content center
+      align-items center
+      cursor pointer
+      &:hover
+        background-color #658961
+        svg
+          fill #ffffff
+
+

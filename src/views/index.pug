@@ -1,0 +1,21 @@
+extends layouts/default
+
+block variables
+	- const title = "okFito"
+
+block content
+	include ../blocks/components/header/header
+	include ../blocks/components/about/about
+	include ../blocks/components/aboutSecond/aboutSecond
+	include ../blocks/components/productList/productList
+	include ../blocks/components/readyProducts/readyProducts
+	include ../blocks/components/formBlock/formBlock
+	include ../blocks/components/footer/footer
+
+block scripts
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js")
+	//- script(src="./js/vendor.js")
+	script(src="./js/main.js")
+	script(src="https://static.faberlic.com/start_14_20/js/sharescript.js")
+	script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+	script(src="../js/index.js")

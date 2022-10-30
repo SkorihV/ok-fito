@@ -1,0 +1,155 @@
+.product-list
+  display flex
+  flex-direction column
+  align-items center
+  position relative
+  margin-top em(80)
+  margin-bottom em(50)
+  &::after
+    content ''
+    position absolute
+    width em(400)
+    height em(650)
+    right 0
+    top em(-120)
+    background-image url("../../../img/productList/sheet.png")
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+
+  &__label
+    font-size em(60)
+    line-height em(60 / 3.75)
+    font-weight 400
+    margin-bottom em(60 / 3.75)
+    z-index 1
+  &__list-wrapper
+    z-index 1
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    max-width em(1520)
+    width 100%
+  &__item
+    width em(358)
+    height em(500)
+    overflow hidden
+    position relative
+    margin em(20) 0
+    &-image
+      object-fit contain
+      width 100%
+      height auto
+    &-label_main
+      font-size em(46)
+      line-height em(46 / 2.875)
+      position absolute
+      font-weight 800
+      color color-white
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+    &-control
+      top 0
+      left 0
+      right 0
+      bottom 0
+      flex-direction column
+      align-items center
+      position absolute
+      background rgba(0, 0, 0, 0.5)
+      justify-content center
+      display none
+    &:hover
+      .product-list__item-control
+        display flex
+      .product-list__item-label_main
+        display none
+    &-label_hover
+      font-size em(30)
+      color color-white
+      display flex
+      justify-content center
+      text-align center
+      margin-bottom em(35 / 1.875)
+      font-weight 600
+    &-button
+      background-color transparent
+      border em(2) solid color-white
+      &:hover
+        background-color #64A060
+  &__control
+    display flex
+    justify-content center
+    align-items center
+    max-width em(1520)
+    width 100%
+    position relative
+    margin-top em(60)
+    &-more
+      background-color #64A060
+      &:hover
+        background-color #40763D
+
+  &__pagination
+      &-wrapper
+        position absolute
+        right 0
+        display flex
+        gap em(10)
+      &-item
+        width em(40)
+        height em(40)
+        border em(1) solid #A5A5A5
+        display flex
+        justify-content center
+        align-items center
+        border-radius em(8)
+        cursor pointer
+        font-weight 500
+        &_current
+          background-color #64A060
+          color color-white
+        &:hover
+          background-color #64A060
+          color color-white
+        &_left,
+        &_left-zero,
+        &_right,
+        &_right-zero
+          background-color #F5F5F5
+          position relative
+
+          &::before,
+          &::after
+            width em(8)
+            height  em(8)
+            content ''
+            position absolute
+            top 50%
+            left 50%
+            border-left em(1) solid black
+            border-top em(1) solid black
+          &:hover
+            &::before,
+            &::after
+              border-color color-white
+        &_left::before,
+        &_left-zero::before
+          transform translate(-50%, -50%) rotate(-45deg)
+
+        &_left::after
+          display none
+
+        &_left-zero::after
+          transform translate(0%, -50%) rotate(-45deg)
+
+        &_right::before,
+        &_right-zero::before
+          transform translate(-50%, -50%) rotate(135deg)
+
+        &_right::after
+          display none
+        &_right-zero::after
+          transform translate(0%, -50%) rotate(135deg)
+
