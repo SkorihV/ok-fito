@@ -67,7 +67,7 @@ color-white = #FFFFFF
 
   &__wrapper
     display flex
-    justify-content space-around
+    justify-content center
     max-width em(1520)
     width 100%
     color color-white
@@ -76,16 +76,18 @@ color-white = #FFFFFF
     position relative
     align-items center
     gap em(10)
+    +md-block()
+      justify-content space-around
+
     .open
       &__mobile-menu
-        width em(33)
-        height em(20)
+        width 29px
+        height 20px
         display flex
         align-items center
         position relative
         cursor pointer
         top em(7)
-        margin-left em(22)
         +md-block()
           top auto
           margin-left em(55)
@@ -93,16 +95,16 @@ color-white = #FFFFFF
           display none
         &-btn
           width 100%
-          height em(2)
+          height 2px
           background-color color-white
-          border-radius 50%
+          border-radius 22px
         &::before,
         &::after
           content ''
           width 100%
-          height em(2)
+          height 2px
           background-color color-white
-          border-radius 50%
+          border-radius 22px
           position absolute
         &::before
           top 0
@@ -132,6 +134,7 @@ color-white = #FFFFFF
       &__wrapper
         display flex
         align-items flex-end
+        align-self flex-end
         +md-block()
           flex 1 1 auto
           width 100%
@@ -151,7 +154,7 @@ color-white = #FFFFFF
         +md-block()
           display block
         +lg-block()
-          margin-bottom  em(20)
+          margin-bottom  em(25/1.25)
 
 
       &__social
@@ -159,18 +162,23 @@ color-white = #FFFFFF
         align-items center
         gap em(6)
         position relative
-        top em(10)
         +md-block()
           top auto
 
       &__icon
-        width em(32)
-        height em(32)
+        width em(20)
+        height em(20)
         border-radius 50%
         background-size cover
         background-position center
         background-repeat no-repeat
 
+        +md-block()
+          width em(40)
+          height em(40)
+        +lg-block()
+          width em(30)
+          height em(30)
         &-telegram
           background-image url("../img/header/telegram.png")
 
@@ -178,12 +186,20 @@ color-white = #FFFFFF
           background-image url("../img/header/watsap.png")
       &__time
         opacity 0.7
+        font-size em(20)
+        font-weight 500
+        line-height em(24 / 1.25)
+        display none
+        +md-block()
+          display block
+
   &__logo
-    width em(183)
+    width em(115)
     object-fit contain
     display block
     +md-block()
       display none
+      width em(183)
     +lg-block()
         display block
         bottom 50%
@@ -202,6 +218,7 @@ color-white = #FFFFFF
     margin em(100) 0 em(30)
     max-width em(952 / 5)
     text-align center
+    font-family "Cormorant Garamond", Arial, sans-serif
     +md-block()
       font-size em(80)
       line-height em(64 / 5)
